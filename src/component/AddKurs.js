@@ -26,10 +26,7 @@ class AddKurs extends Component{
     handleChange(e){
         this.setState({
             kurs:e.target.value
-        }, function () {
-           
-       });
-       console.log(this.state.kurs)
+        });
     }
     handleSubmit(){
         this.props.getKurs(this.state.kurs)
@@ -46,8 +43,7 @@ class AddKurs extends Component{
                                 <option>+ Add More Currencies</option>
                                 {Object.keys(rates).map((key, index) => 
                                     <option value={key} key={index}>{key}</option>
-                                )
-                                }
+                                )}
                             </Input>
                         </FormGroup>
                     </Col>
